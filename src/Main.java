@@ -498,3 +498,12 @@ public void actionPerformed(ActionEvent e) {
 textField.setText("");
 }
 });
+
+
+ // Display the frame
+    frame.setVisible(true);
+}
+
+public static void main(String[] args) {
+    new Calculator();
+}
