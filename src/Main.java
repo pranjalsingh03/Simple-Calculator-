@@ -452,3 +452,49 @@ public class Calculator {
         buttonAdd.addActionListener(new ActionListener() {
             public void actionPerformed
 
+        (ActionEvent e) {
+textField.setText(textField.getText() + "+");
+}
+});
+
+buttonSubtract.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+textField.setText(textField.getText() + "-");
+}
+});
+
+buttonMultiply.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+textField.setText(textField.getText() + "*");
+}
+});
+
+buttonDivide.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+textField.setText(textField.getText() + "/");
+}
+});
+
+buttonEquals.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+String expression = textField.getText();
+
+// Use a try-catch block to handle errors in the expression
+
+try {
+
+// Evaluate the expression using the built-in JavaScript engine
+
+Object result = new ScriptEngineManager().getEngineByName("JavaScript").eval(expression);
+textField.setText(result.toString());
+} catch (ScriptException ex) {
+textField.setText("Error");
+}
+}
+});
+
+buttonClear.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent e) {
+textField.setText("");
+}
+});
