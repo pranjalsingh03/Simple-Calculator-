@@ -507,3 +507,6 @@ textField.setText("");
 public static void main(String[] args) {
     new Calculator();
 }
+
+
+// This code creates a JFrame with a grid layout of buttons for numbers, operators, and a clear button. It also includes an equals button which evaluates the expression in the text field using the built-in JavaScript engine in Java, and a text field for displaying the input and output. You can customize the interface and the evaluation logic to fit your needs.
